@@ -1,0 +1,87 @@
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root{
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /* 
+      Change favorite color
+      Default: hsl(162, 100%, 40%)
+      Orange: hsl(14, 100%, 65%) - Blue: hsl(210, 100%, 70%)
+      Pink: hsl(356, 100%, 75%) - Purple: hsl(250, 100%, 75%)
+      For more colors visit: https://colors.dopely.top/color-pedia
+      -> Choose any color 
+      -> click on tab (Color Conversion)
+      -> Copy the color mode (HSL)
+  */
+  /*========== Colors ==========*/
+  --hue: 269;
+  --first-color: hsl(var(--hue), 34%, 56%);
+  --second-color: hsl(var(--hue), 100%, 100%);
+  --body--color: hsl(228, 7.9%, 12.4%);
+  --container-color: hsl(261.6, 51.9%, 47.3%);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*=============== BASE ===============*/
+*{
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {  
+  align-items: center;
+  background-color: var(--body--color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--body-font);
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--first-color);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.sound__table{
+  background-color: var(--container-color);
+  box-shadow: 3px 3px 0 var(--first-color);
+  border-radius: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.25rem;
+}
+
+ .sound__key{
+  background-color: var(--second-color);
+  border-radius: 30px;
+  box-shadow: 3px 3px 0 var(--first-color);
+  color: var(--first-color);
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+} 
+
+.sound__key:hover{
+  background-color: var(--first-color);
+  box-shadow: 3px 3px 0 var(--second-color);
+  color: var(--second-color);
+}
+
+
